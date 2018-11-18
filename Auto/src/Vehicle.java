@@ -72,16 +72,14 @@ public class Vehicle {
         System.out.println(getModel() + " " + getYear() + " " + getColor() + " " + getMaxSpeed() + " ");
     }
 
-    public boolean equals(Vehicle vehicle)
-    {
+    public boolean equals(Vehicle vehicle) {
         if (vehicle == this)
             return true;
         if (vehicle == null)
             return false;
         if (!(getClass() == vehicle.getClass()))
             return false;
-        else
-        {
+        else {
             if (vehicle.model == this.model && vehicle.year == this.year && vehicle.color == this.color && vehicle.maxSpeed == this.maxSpeed)
                 return true;
             else

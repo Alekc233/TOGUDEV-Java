@@ -15,7 +15,7 @@ public class Bus extends Driver {
         log.info("Bus Constructor");
     }
 
-    public void PassangerComeIn(int pss){
+    public final void PassangerComeIn(int pss){
         if (passenger == passengerMax) {
             System.out.println("Oops! You have reached the passenger quantity limit!");
             return;
@@ -28,9 +28,17 @@ public class Bus extends Driver {
         return;
     }
 
-    public void PassangerComeOut(int pss){
+    public final void PassangerComeOut(int pss){
         passenger -= pss;
         return;
+    }
+
+    public void IncapsulationBus(){
+        super.forward();
+        super.backward();
+        super.right();
+        super.left();
+        super.beep();
     }
 
     public int getPassengerMax() {
@@ -57,7 +65,7 @@ public class Bus extends Driver {
         this.conductorName = conductorName;
     }
 
-    public void busInfo() {
+    public final void busInfo() {
         super.DriverInfo();
         System.out.println(passengerMax + " " + ticketCost + " " + conductorName + " ");
     }

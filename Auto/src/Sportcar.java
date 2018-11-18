@@ -15,29 +15,12 @@ public class Sportcar extends Driver {
         log.info("Sportcar Constructor");
     }
 
-    @Override
-    public void right() {
-        System.out.println("Turn Right");
-    }
-
-    @Override
-    public void left() {
-        System.out.println("Turn Left");
-    }
-
-    @Override
-    public void forward() {
-        System.out.println("Move Forward");
-    }
-
-    @Override
-    public void backward() {
-        System.out.println("Move Backward");
-    }
-
-    @Override
-    public void beep() {
-        System.out.println("Beep");
+    public void IncapsulationSportcar() {
+        super.forward();
+        super.backward();
+        super.left();
+        super.right();
+        super.beep();
     }
 
     public String getCost() {
@@ -64,7 +47,7 @@ public class Sportcar extends Driver {
         this.transmission = transmission;
     }
 
-    public void sportcarInfo(){
+    public final void sportcarInfo(){
         super.DriverInfo();
         System.out.println(engine + " " + transmission + " " + cost + " ");
     }

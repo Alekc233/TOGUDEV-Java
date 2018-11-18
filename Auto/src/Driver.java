@@ -1,8 +1,8 @@
 import java.util.logging.Logger;
 
 public class Driver extends Vehicle{
-    String driverMame;
-    int driverAge;
+    private String driverMame;
+    private int driverAge;
     private static Logger log = Logger.getLogger(Driver.class.getName());
 
     public Driver (String model, String year, String color, String maxSpeed, String driverName, int driverAge){
@@ -15,7 +15,7 @@ public class Driver extends Vehicle{
     @Override
     public void forward(){
         if (driverAge >= 18)
-            System.out.println("This driver is allowed!");
+            System.out.println("This driver is allowed!, Moving Forward");
         else
             System.out.println("10-40, Suspicious vehicle noticed, beginning pursuit");
     }
@@ -23,7 +23,7 @@ public class Driver extends Vehicle{
     @Override
     public void backward(){
         if (driverAge >= 18)
-            System.out.println("This driver is allowed!");
+            System.out.println("This driver is allowed!, Moving Backward!");
         else
             System.out.println("10-40, Suspicious vehicle noticed, beginning pursuit");
     }
@@ -31,7 +31,7 @@ public class Driver extends Vehicle{
     @Override
     public void left(){
         if (driverAge >= 18)
-            System.out.println("This driver is allowed!");
+            System.out.println("This driver is allowed!, Turning Left!");
         else
             System.out.println("10-40, Suspicious vehicle noticed, beginning pursuit");
     }
@@ -39,9 +39,14 @@ public class Driver extends Vehicle{
     @Override
     public void right(){
         if (driverAge >= 18)
-            System.out.println("This driver is allowed!");
+            System.out.println("This driver is allowed!, Turning Right!");
         else
             System.out.println("10-40, Suspicious vehicle noticed, beginning pursuit");
+    }
+
+    @Override
+    public void beep(){
+        System.out.println("Beep");
     }
 
     public String getDriverMame() {
