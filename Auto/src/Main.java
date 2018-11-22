@@ -27,19 +27,19 @@ public class Main {
         System.out.println(" ");
 
         UncleSam.DriverInfo();
-        UncleSam.right();
+        UncleSam.turnRight();
         System.out.println(" ");
 
         KidPeter.DriverInfo();
-        KidPeter.forward();
+        KidPeter.moveForward();
         System.out.println(" ");
 
         Bugatti.sportcarInfo();
-        Bugatti.forward();
+        Bugatti.moveForward();
         System.out.println(" ");
 
         PAZ.busInfo();
-        PAZ.forward();
+        PAZ.moveForward();
         PAZ.PassangerComeIn(15);
         PAZ.PassangerComeOut(7);
         PAZ.PassangerComeIn(21);

@@ -16,11 +16,11 @@ public class Sportcar extends Driver {
     }
 
     public void IncapsulationSportcar() {
-        super.forward();
-        super.backward();
-        super.left();
-        super.right();
-        super.beep();
+        super.moveForward();
+        super.moveBackward();
+        super.turnLeft();
+        super.turnRight();
+        super.beeping();
     }
 
     public String getCost() {

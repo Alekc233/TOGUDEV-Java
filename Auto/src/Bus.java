@@ -34,11 +34,11 @@ public class Bus extends Driver {
     }
 
     public void IncapsulationBus(){
-        super.forward();
-        super.backward();
-        super.right();
-        super.left();
-        super.beep();
+        super.moveForward();
+        super.moveBackward();
+        super.turnRight();
+        super.turnLeft();
+        super.beeping();
     }
 
     public int getPassengerMax() {

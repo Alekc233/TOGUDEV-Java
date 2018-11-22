@@ -1,6 +1,6 @@
 import java.util.logging.Logger;
 
-public class Driver extends Vehicle{
+public class Driver extends AbCar implements ICar{
     private String driverMame;
     private int driverAge;
     private static Logger log = Logger.getLogger(Driver.class.getName());
@@ -13,45 +13,46 @@ public class Driver extends Vehicle{
     }
 
     @Override
-    public void forward(){
+    public String moveForward() {
         if (driverAge >= 18)
             System.out.println("This driver is allowed!, Moving Forward");
         else
             System.out.println("10-40, Suspicious vehicle noticed, beginning pursuit");
+        return  "Forward";
     }
 
     @Override
-    public void backward(){
+    public String moveBackward() {
         if (driverAge >= 18)
-            System.out.println("This driver is allowed!, Moving Backward!");
+            System.out.println("This driver is allowed!, Moving Backward");
         else
             System.out.println("10-40, Suspicious vehicle noticed, beginning pursuit");
+        return "Backward";
     }
 
     @Override
-    public void left(){
+    public String turnLeft() {
         if (driverAge >= 18)
-            System.out.println("This driver is allowed!, Turning Left!");
+            System.out.println("This driver is allowed!, Turning Left");
         else
             System.out.println("10-40, Suspicious vehicle noticed, beginning pursuit");
+        return "Left";
     }
 
     @Override
-    public void right(){
+    public String turnRight() {
         if (driverAge >= 18)
-            System.out.println("This driver is allowed!, Turning Right!");
+            System.out.println("This driver is allowed!, Turning Right");
         else
             System.out.println("10-40, Suspicious vehicle noticed, beginning pursuit");
+        return "Right";
     }
 
     @Override
-    public void beep(){
-        System.out.println("Beep");
+    public String beeping() {
+        return "beep";
     }
 
-    public String getDriverMame() {
-        return driverMame;
-    }
 
     public void setDriverMame(String driverMame) {
         this.driverMame = driverMame;
@@ -63,6 +64,10 @@ public class Driver extends Vehicle{
 
     public void setDriverAge(int driverAge) {
         this.driverAge = driverAge;
+    }
+
+    public String getDriverName() {
+        return driverMame;
     }
 
     public void DriverInfo() {
